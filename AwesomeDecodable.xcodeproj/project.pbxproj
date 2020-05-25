@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E75CF81247BF9DD0048B176 /* String+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75CF80247BF9DD0048B176 /* String+Data.swift */; };
 		2E9556AA247BEF7C0093A0B2 /* AwesomeDecodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */; };
 		2E9556B1247BEF7C0093A0B2 /* AwesomeDecodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E9556BB247BF07E0093A0B2 /* LossyDecodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E75CF80247BF9DD0048B176 /* String+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Data.swift"; sourceTree = "<group>"; };
 		2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwesomeDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwesomeDecodable.h; sourceTree = "<group>"; };
 		2E9556A4247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E75CF82247BF9E40048B176 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E9556BF247BF23D0093A0B2 /* JSONDecoder+Default.swift */,
+				2E75CF80247BF9DD0048B176 /* String+Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2E955696247BEF7C0093A0B2 = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				2E9556C5247BF2E40093A0B2 /* Array */,
-				2E9556BC247BF1A90093A0B2 /* Helpers */,
 				2E9556C1247BF2AA0093A0B2 /* JSON */,
+				2E9556BC247BF1A90093A0B2 /* Helpers */,
 				2E9556B0247BEF7C0093A0B2 /* Info.plist */,
 			);
 			path = AwesomeDecodableTests;
@@ -112,7 +123,7 @@
 		2E9556BC247BF1A90093A0B2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2E9556BF247BF23D0093A0B2 /* JSONDecoder+Default.swift */,
+				2E75CF82247BF9E40048B176 /* Extensions */,
 				2E9556BD247BF1B40093A0B2 /* FileReader.swift */,
 			);
 			path = Helpers;
@@ -348,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E75CF81247BF9DD0048B176 /* String+Data.swift in Sources */,
 				2E9556C0247BF23D0093A0B2 /* JSONDecoder+Default.swift in Sources */,
 				2E9556BE247BF1B40093A0B2 /* FileReader.swift in Sources */,
 				2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */,

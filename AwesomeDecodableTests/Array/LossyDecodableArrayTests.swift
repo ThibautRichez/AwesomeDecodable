@@ -23,6 +23,7 @@ fileprivate struct Users: Decodable, Equatable {
 class LossyDecodableArrayTests: QuickSpec {
     override func spec() {
         self.test_givenValidEntries()
+        self.testing()
     }
 
     func test_givenValidEntries() {
@@ -36,6 +37,25 @@ class LossyDecodableArrayTests: QuickSpec {
                     }.to(equal(
                         Users(users: [User(firstname: "toto", lastname: "tata")])
                     ))
+                }
+            }
+        }
+    }
+
+    func testing() {
+        describe("GIVEN a valid array of strings") {
+            let json = """
+            ["tata", "toto"]
+            """
+            context("WHEN we decode the associated data") {
+                it("THEN it should have the right values") {
+                    expect {
+                        let data = try json.data(using: .utf8)
+                        return try JSONDecoder.default.decode([String].self, from: data)
+                    }.to(equal(
+                        ["tata", "toto2"]
+                    ))
+
                 }
             }
         }
