@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E9556AA247BEF7C0093A0B2 /* AwesomeDecodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */; };
-		2E9556AF247BEF7C0093A0B2 /* AwesomeDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556AE247BEF7C0093A0B2 /* AwesomeDecodableTests.swift */; };
 		2E9556B1247BEF7C0093A0B2 /* AwesomeDecodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E9556BB247BF07E0093A0B2 /* LossyDecodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */; };
+		2E9556BE247BF1B40093A0B2 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BD247BF1B40093A0B2 /* FileReader.swift */; };
+		2E9556C0247BF23D0093A0B2 /* JSONDecoder+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BF247BF23D0093A0B2 /* JSONDecoder+Default.swift */; };
+		2E9556C3247BF2BF0093A0B2 /* valid-users.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9556C2247BF2BF0093A0B2 /* valid-users.json */; };
+		2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */; };
+		8F446F385551ECEBD6315B56 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55913FBAB5B8248646525748 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework */; };
+		CD60DDB80D46B137F0EB3669 /* Pods_AwesomeDecodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F8FC27D71C5E1FAC74B9F8 /* Pods_AwesomeDecodable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +33,18 @@
 		2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwesomeDecodable.h; sourceTree = "<group>"; };
 		2E9556A4247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9556A9247BEF7C0093A0B2 /* AwesomeDecodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeDecodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E9556AE247BEF7C0093A0B2 /* AwesomeDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeDecodableTests.swift; sourceTree = "<group>"; };
 		2E9556B0247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDecodableArray.swift; sourceTree = "<group>"; };
+		2E9556BD247BF1B40093A0B2 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		2E9556BF247BF23D0093A0B2 /* JSONDecoder+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Default.swift"; sourceTree = "<group>"; };
+		2E9556C2247BF2BF0093A0B2 /* valid-users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-users.json"; sourceTree = "<group>"; };
+		2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDecodableArrayTests.swift; sourceTree = "<group>"; };
+		55913FBAB5B8248646525748 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeDecodable_AwesomeDecodableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F8FC27D71C5E1FAC74B9F8 /* Pods_AwesomeDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD3D0A928B1B295CB476995 /* Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeDecodable-AwesomeDecodableTests/Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0D189A9AF7CC8DEC3BD5AB4 /* Pods-AwesomeDecodable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeDecodable.release.xcconfig"; path = "Target Support Files/Pods-AwesomeDecodable/Pods-AwesomeDecodable.release.xcconfig"; sourceTree = "<group>"; };
+		C1788D5364FA0FF9749D0BB1 /* Pods-AwesomeDecodable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeDecodable.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeDecodable/Pods-AwesomeDecodable.debug.xcconfig"; sourceTree = "<group>"; };
+		DDF0EEEEC8A857238650C66C /* Pods-AwesomeDecodable-AwesomeDecodableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeDecodable-AwesomeDecodableTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeDecodable-AwesomeDecodableTests/Pods-AwesomeDecodable-AwesomeDecodableTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD60DDB80D46B137F0EB3669 /* Pods_AwesomeDecodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9556AA247BEF7C0093A0B2 /* AwesomeDecodable.framework in Frameworks */,
+				8F446F385551ECEBD6315B56 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +74,8 @@
 				2E9556A2247BEF7C0093A0B2 /* AwesomeDecodable */,
 				2E9556AD247BEF7C0093A0B2 /* AwesomeDecodableTests */,
 				2E9556A1247BEF7C0093A0B2 /* Products */,
+				479BC71D65D5535CFAF2BC4D /* Pods */,
+				DEDC9C368357F5224CA9E3BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +93,7 @@
 			children = (
 				2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */,
 				2E9556A4247BEF7C0093A0B2 /* Info.plist */,
+				2E9556C4247BF2D00093A0B2 /* Array */,
 			);
 			path = AwesomeDecodable;
 			sourceTree = "<group>";
@@ -80,10 +101,65 @@
 		2E9556AD247BEF7C0093A0B2 /* AwesomeDecodableTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E9556AE247BEF7C0093A0B2 /* AwesomeDecodableTests.swift */,
+				2E9556C5247BF2E40093A0B2 /* Array */,
+				2E9556BC247BF1A90093A0B2 /* Helpers */,
+				2E9556C1247BF2AA0093A0B2 /* JSON */,
 				2E9556B0247BEF7C0093A0B2 /* Info.plist */,
 			);
 			path = AwesomeDecodableTests;
+			sourceTree = "<group>";
+		};
+		2E9556BC247BF1A90093A0B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E9556BF247BF23D0093A0B2 /* JSONDecoder+Default.swift */,
+				2E9556BD247BF1B40093A0B2 /* FileReader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2E9556C1247BF2AA0093A0B2 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				2E9556C2247BF2BF0093A0B2 /* valid-users.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		2E9556C4247BF2D00093A0B2 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		2E9556C5247BF2E40093A0B2 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		479BC71D65D5535CFAF2BC4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1788D5364FA0FF9749D0BB1 /* Pods-AwesomeDecodable.debug.xcconfig */,
+				B0D189A9AF7CC8DEC3BD5AB4 /* Pods-AwesomeDecodable.release.xcconfig */,
+				7BD3D0A928B1B295CB476995 /* Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig */,
+				DDF0EEEEC8A857238650C66C /* Pods-AwesomeDecodable-AwesomeDecodableTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DEDC9C368357F5224CA9E3BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71F8FC27D71C5E1FAC74B9F8 /* Pods_AwesomeDecodable.framework */,
+				55913FBAB5B8248646525748 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +180,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E9556B4247BEF7C0093A0B2 /* Build configuration list for PBXNativeTarget "AwesomeDecodable" */;
 			buildPhases = (
+				17FEC6E71C71531532386E52 /* [CP] Check Pods Manifest.lock */,
 				2E95569B247BEF7C0093A0B2 /* Headers */,
 				2E95569C247BEF7C0093A0B2 /* Sources */,
 				2E95569D247BEF7C0093A0B2 /* Frameworks */,
@@ -122,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E9556B7247BEF7C0093A0B2 /* Build configuration list for PBXNativeTarget "AwesomeDecodableTests" */;
 			buildPhases = (
+				7EED54626F5DE6C692AFE0D3 /* [CP] Check Pods Manifest.lock */,
 				2E9556A5247BEF7C0093A0B2 /* Sources */,
 				2E9556A6247BEF7C0093A0B2 /* Frameworks */,
 				2E9556A7247BEF7C0093A0B2 /* Resources */,
+				BFAFFF5E315D7EC9E74BA52A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +227,7 @@
 				TargetAttributes = {
 					2E95569F247BEF7C0093A0B2 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					2E9556A8247BEF7C0093A0B2 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -185,16 +265,82 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9556C3247BF2BF0093A0B2 /* valid-users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17FEC6E71C71531532386E52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AwesomeDecodable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EED54626F5DE6C692AFE0D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AwesomeDecodable-AwesomeDecodableTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFAFFF5E315D7EC9E74BA52A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeDecodable-AwesomeDecodableTests/Pods-AwesomeDecodable-AwesomeDecodableTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AwesomeDecodable-AwesomeDecodableTests/Pods-AwesomeDecodable-AwesomeDecodableTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AwesomeDecodable-AwesomeDecodableTests/Pods-AwesomeDecodable-AwesomeDecodableTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E95569C247BEF7C0093A0B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9556BB247BF07E0093A0B2 /* LossyDecodableArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9556AF247BEF7C0093A0B2 /* AwesomeDecodableTests.swift in Sources */,
+				2E9556C0247BF23D0093A0B2 /* JSONDecoder+Default.swift in Sources */,
+				2E9556BE247BF1B40093A0B2 /* FileReader.swift in Sources */,
+				2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -339,7 +487,9 @@
 		};
 		2E9556B5247BEF7C0093A0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1788D5364FA0FF9749D0BB1 /* Pods-AwesomeDecodable.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KY836J44VZ;
@@ -348,6 +498,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AwesomeDecodable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.richez.AwesomeDecodable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +515,9 @@
 		};
 		2E9556B6247BEF7C0093A0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D189A9AF7CC8DEC3BD5AB4 /* Pods-AwesomeDecodable.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KY836J44VZ;
@@ -372,6 +526,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AwesomeDecodable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,7 +542,9 @@
 		};
 		2E9556B8247BEF7C0093A0B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD3D0A928B1B295CB476995 /* Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KY836J44VZ;
 				INFOPLIST_FILE = AwesomeDecodableTests/Info.plist;
@@ -405,7 +562,9 @@
 		};
 		2E9556B9247BEF7C0093A0B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDF0EEEEC8A857238650C66C /* Pods-AwesomeDecodable-AwesomeDecodableTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KY836J44VZ;
 				INFOPLIST_FILE = AwesomeDecodableTests/Info.plist;
