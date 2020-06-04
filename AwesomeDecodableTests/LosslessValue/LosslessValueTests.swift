@@ -22,7 +22,7 @@ fileprivate struct User: Decodable, Equatable {
     let name: String
 
     @DefaultIntLosslessValue
-    var age: Int
+    private(set) var age: Int
 }
 
 class LosslessValueTests: QuickSpec {

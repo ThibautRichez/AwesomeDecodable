@@ -18,7 +18,7 @@ fileprivate struct Article: Decodable, Equatable {
 
 fileprivate struct ArticleList: Decodable, Equatable {
     @LossyDecodableArray
-    var articles: [Article] = []
+    private(set) var articles: [Article] = []
 }
 
 class LossyDecodableArrayTests: QuickSpec {
