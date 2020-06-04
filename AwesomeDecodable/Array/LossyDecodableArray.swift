@@ -60,7 +60,7 @@ public struct LossyDecodableArray<Element: Decodable>: Decodable {
 extension LossyDecodableArray: Equatable where Element: Equatable {
     public static func == (lhs: LossyDecodableArray<Element>,
                            rhs: LossyDecodableArray<Element>) -> Bool {
-        return lhs.wrappedValue == rhs.wrappedValue
+        lhs.wrappedValue == rhs.wrappedValue
     }
 }
 

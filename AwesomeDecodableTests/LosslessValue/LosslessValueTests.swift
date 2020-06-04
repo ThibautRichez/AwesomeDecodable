@@ -72,6 +72,8 @@ private extension LosslessValueTests {
                 it("THEN it should have the right value") {
                     expect(sut).toNot(beNil())
                     expect(sut).to(equal(expectedUser))
+
+                    expect(sut?.$age.error).to(beNil())
                 }
             }
         }
@@ -97,6 +99,8 @@ private extension LosslessValueTests {
                 it("THEN it should have the right value because the string case is handle by IntOrStringDecodingStrategy") {
                     expect(sut).toNot(beNil())
                     expect(sut).to(equal(expectedUser))
+
+                    expect(sut?.$age.error).to(beNil())
                 }
             }
         }
@@ -124,6 +128,16 @@ private extension LosslessValueTests {
                     expect(sut).toNot(equal(expectedUser))
                     expect(sut?.name).to(equal(expectedUser.name))
                     expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+
+                    expect({
+                        guard case LosslessValueDecodingError.invalidValue(let value, let type)? = sut?.$age.error else {
+                            return .failed(reason: "The error should be of type 'invalidValue'")
+                        }
+
+                        expect(value).to(equal("I'm not convertible to a number"))
+                        expect("\(type)").to(equal("Int"))
+                        return .succeeded
+                    }).to(succeed())
                 }
             }
         }
@@ -150,6 +164,15 @@ private extension LosslessValueTests {
                 expect(sut).toNot(equal(expectedUser))
                 expect(sut?.name).to(equal(expectedUser.name))
                 expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+
+                expect({
+                    guard case LosslessValueDecodingError.unsupportedType(let types)? = sut?.$age.error else {
+                        return .failed(reason: "The error should be of type 'unsupportedType'")
+                    }
+
+                    expect(types.map { "\($0)" }).to(equal(["String"]))
+                    return .succeeded
+                }).to(succeed())
             }
         }
     }
@@ -175,6 +198,8 @@ private extension LosslessValueTests {
                 expect(sut).toNot(equal(expectedUser))
                 expect(sut?.name).to(equal(expectedUser.name))
                 expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+
+                expect(sut?.$age.error).to(beNil())
             }
         }
     }
@@ -200,6 +225,8 @@ private extension LosslessValueTests {
                 expect(sut).toNot(equal(expectedUser))
                 expect(sut?.name).to(equal(expectedUser.name))
                 expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+
+                expect(sut?.$age.error).to(beNil())
             }
         }
 
