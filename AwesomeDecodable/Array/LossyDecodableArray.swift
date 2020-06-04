@@ -22,8 +22,10 @@ fileprivate struct DecodableDummy: Decodable {}
 /// accessing the `$variable.errors` array that will contains
 /// `DecodingError`s that occured for each skipped elements.
 ///
-/// This is useful for array that contain non-optionnal types and prevents one
+/// This is useful for array that contain non-optional types and prevents one
 /// or multiple badly formated JSON object to result to a global `DecodingError`.
+/// This will also set the value to an empty array if the key is not present or
+/// if its associated value is 'null'
 @propertyWrapper
 public struct LossyDecodableArray<Element: Decodable>: Decodable {
     public let wrappedValue: [Element]
