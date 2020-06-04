@@ -42,7 +42,8 @@ class LosslessValueTests: QuickSpec {
             }
 
             self.test_givenValidEntry()
-            self.test_givenEntryWithAgeAsString()
+            self.test_givenEntryWithAgeAsValidString()
+            self.test_givenEntryWithAgeAsInvalidString()
             self.test_givenEntryWithAgeAsBool()
             self.test_givenEntryWithNullAge()
             self.test_givenMissingAge()
@@ -76,9 +77,9 @@ private extension LosslessValueTests {
         }
     }
 
-    func test_givenEntryWithAgeAsString() {
-        describe("GIVEN a file with user entry with String as the age") {
-            let filename = "user-string-age"
+    func test_givenEntryWithAgeAsValidString() {
+        describe("GIVEN a file with user entry with a valid String as the age") {
+            let filename = "user-valid-string-age"
             var sut: User?
 
             let expectedUser = User(name: "Thibaut Richez", age: 25)
@@ -96,6 +97,33 @@ private extension LosslessValueTests {
                 it("THEN it should have the right value because the string case is handle by IntOrStringDecodingStrategy") {
                     expect(sut).toNot(beNil())
                     expect(sut).to(equal(expectedUser))
+                }
+            }
+        }
+    }
+
+    func test_givenEntryWithAgeAsInvalidString() {
+        describe("GIVEN a file with user entry with an invalid String as the age") {
+            let filename = "user-invalid-string-age"
+            var sut: User?
+
+            let expectedUser = User(name: "Thibaut Richez", age: 25)
+
+            context("WHEN we decode the associated data") {
+                beforeEach {
+                    do {
+                        let data = try self.fileReader.get(filename: filename)
+                        sut = try self.decoder.decode(User.self, from: data)
+                    } catch {
+                        fail("An error occured: \(error)")
+                    }
+                }
+
+                it("THEN it should have the right name and the default age") {
+                    expect(sut).toNot(beNil())
+                    expect(sut).toNot(equal(expectedUser))
+                    expect(sut?.name).to(equal(expectedUser.name))
+                    expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
                 }
             }
         }

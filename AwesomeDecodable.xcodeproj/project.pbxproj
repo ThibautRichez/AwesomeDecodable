@@ -14,10 +14,11 @@
 		2E5F95352489223800DF08AC /* LosslessValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F95342489223800DF08AC /* LosslessValue.swift */; };
 		2E5F95382489251F00DF08AC /* LosslessValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F95372489251F00DF08AC /* LosslessValueTests.swift */; };
 		2E5F953B248927EA00DF08AC /* valid-user.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953A248927EA00DF08AC /* valid-user.json */; };
-		2E5F953D24892B5C00DF08AC /* user-string-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953C24892B5C00DF08AC /* user-string-age.json */; };
+		2E5F953D24892B5C00DF08AC /* user-valid-string-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953C24892B5C00DF08AC /* user-valid-string-age.json */; };
 		2E5F953F24892C5300DF08AC /* user-bool-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953E24892C5300DF08AC /* user-bool-age.json */; };
 		2E5F954124892E0C00DF08AC /* user-null-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F954024892E0C00DF08AC /* user-null-age.json */; };
 		2E5F954324892E5B00DF08AC /* user-missing-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F954224892E5B00DF08AC /* user-missing-age.json */; };
+		2E5F9545248930C800DF08AC /* user-invalid-string-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F9544248930C800DF08AC /* user-invalid-string-age.json */; };
 		2E9556AA247BEF7C0093A0B2 /* AwesomeDecodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */; };
 		2E9556B1247BEF7C0093A0B2 /* AwesomeDecodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E9556BB247BF07E0093A0B2 /* LossyDecodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */; };
@@ -46,10 +47,11 @@
 		2E5F95342489223800DF08AC /* LosslessValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessValue.swift; sourceTree = "<group>"; };
 		2E5F95372489251F00DF08AC /* LosslessValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessValueTests.swift; sourceTree = "<group>"; };
 		2E5F953A248927EA00DF08AC /* valid-user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-user.json"; sourceTree = "<group>"; };
-		2E5F953C24892B5C00DF08AC /* user-string-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-string-age.json"; sourceTree = "<group>"; };
+		2E5F953C24892B5C00DF08AC /* user-valid-string-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-valid-string-age.json"; sourceTree = "<group>"; };
 		2E5F953E24892C5300DF08AC /* user-bool-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-bool-age.json"; sourceTree = "<group>"; };
 		2E5F954024892E0C00DF08AC /* user-null-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-null-age.json"; sourceTree = "<group>"; };
 		2E5F954224892E5B00DF08AC /* user-missing-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-missing-age.json"; sourceTree = "<group>"; };
+		2E5F9544248930C800DF08AC /* user-invalid-string-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-invalid-string-age.json"; sourceTree = "<group>"; };
 		2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwesomeDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwesomeDecodable.h; sourceTree = "<group>"; };
 		2E9556A4247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				2E5F953A248927EA00DF08AC /* valid-user.json */,
-				2E5F953C24892B5C00DF08AC /* user-string-age.json */,
+				2E5F953C24892B5C00DF08AC /* user-valid-string-age.json */,
+				2E5F9544248930C800DF08AC /* user-invalid-string-age.json */,
 				2E5F953E24892C5300DF08AC /* user-bool-age.json */,
 				2E5F954024892E0C00DF08AC /* user-null-age.json */,
 				2E5F954224892E5B00DF08AC /* user-missing-age.json */,
@@ -319,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5F9545248930C800DF08AC /* user-invalid-string-age.json in Resources */,
 				2E9556C3247BF2BF0093A0B2 /* valid-articles.json in Resources */,
 				2E5F953B248927EA00DF08AC /* valid-user.json in Resources */,
 				2E5F95322489008500DF08AC /* missing-articles-key.json in Resources */,
@@ -326,7 +330,7 @@
 				2E5F953F24892C5300DF08AC /* user-bool-age.json in Resources */,
 				2E5F952E2488FE8200DF08AC /* invalid-articles.json in Resources */,
 				2E5F954124892E0C00DF08AC /* user-null-age.json in Resources */,
-				2E5F953D24892B5C00DF08AC /* user-string-age.json in Resources */,
+				2E5F953D24892B5C00DF08AC /* user-valid-string-age.json in Resources */,
 				2E5F952C2488FD1A00DF08AC /* one-invalid-article.json in Resources */,
 				2E5F954324892E5B00DF08AC /* user-missing-age.json in Resources */,
 			);
