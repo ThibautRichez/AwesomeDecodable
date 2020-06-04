@@ -1,0 +1,11 @@
+{
+    "articles": [
+        {
+            "identifier": "122",
+            "title": "I am the first article"
+        },
+        {
+            "identifier": 54,
+        }
+    ]
+}

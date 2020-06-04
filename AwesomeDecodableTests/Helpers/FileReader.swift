@@ -14,11 +14,11 @@ enum FileReaderError: Error {
 }
 
 class FileReader {
-    private static let bundle = Bundle(for: FileReader.self)
-    private static let fileManager: FileManager = .default
+    private let bundle = Bundle(for: FileReader.self)
+    private let fileManager: FileManager = .default
 
-    static func get(filename: String,
-                    ofType type: String = "json") throws -> Data {
+    func get(filename: String,
+             ofType type: String = "json") throws -> Data {
         guard let path = self.bundle.path(forResource: filename, ofType: type) else {
             throw FileReaderError.fileNotFound(
                 named: filename,
