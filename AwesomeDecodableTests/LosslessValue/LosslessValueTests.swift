@@ -16,7 +16,7 @@ fileprivate struct IntOrStringDecodingStrategy: LosslessStringDecodingStrategy {
     static var supportedTypes: [LosslessStringDecodable.Type] = [String.self]
 }
 
-fileprivate typealias DefaultIntLosslessValue = LosslessValue<Int, IntOrStringDecodingStrategy>
+fileprivate typealias DefaultIntLosslessValue = LosslessValue<IntOrStringDecodingStrategy>
 
 fileprivate struct User: Decodable, Equatable {
     let name: String
