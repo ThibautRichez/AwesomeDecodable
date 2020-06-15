@@ -11,6 +11,9 @@ import Quick
 import Nimble
 @testable import AwesomeDecodable
 
+/// A Strategy that defines that the expected type is `Int` but should try
+/// to decode the data as a `String` also.
+/// If the decoding process fails, the property value will be `0`
 fileprivate struct IntOrStringDecodingStrategy: LosslessStringDecodingStrategy {
     static var defaultValue: Int = 0
     static var supportedTypes: [LosslessStringDecodable.Type] = [String.self]

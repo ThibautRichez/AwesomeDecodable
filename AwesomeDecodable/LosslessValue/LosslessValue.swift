@@ -24,6 +24,23 @@ public enum LosslessValueDecodingError: Error {
 
 }
 
+/// A `propertyWrapper` that allows the decoding of dynamic
+/// `LosslessStringDecodable` types.
+///`
+///
+/// `@LosslessValue` decodes any `LosslessStringDecodable` defined
+/// by the passed `LosslessStringDecodingStrategy`.
+/// It will first try to decode the value with the passed type, if it fails
+/// it will then try with every types from `supportedTypes`.
+/// If none of them give the expected result, the `defaultValue` will be
+/// applied.
+///
+/// You can inspect if an error had happenend by accessing
+/// the `$variable.error` that will contains `LosslessValueDecodingError`
+/// explaining why the default value was applied.
+///
+/// This is useful when data is returned with unpredictable types form a provider.
+/// For instance, if an API sends either an `Int` or `String` for a given property.
 @propertyWrapper
 public struct LosslessValue<Strategy: LosslessStringDecodingStrategy>: Decodable {
     public let wrappedValue: Strategy.Value
@@ -70,7 +87,7 @@ extension LosslessValue: Equatable where Strategy.Value: Equatable {
 extension KeyedDecodingContainer {
     /// Default implementation for decoding a LossyDecodableArray
     ///
-    /// Decodes successfully if key is available. Otherwise, fallback to an empty array
+    /// Decodes successfully if key is available. Otherwise, fallback to the default value.
     func decode<T>(_ type: LosslessValue<T>.Type,
                    forKey key: KeyedDecodingContainer<K>.Key) throws -> LosslessValue<T> {
         guard let result = try self.decodeIfPresent(type.self, forKey: key) else {
