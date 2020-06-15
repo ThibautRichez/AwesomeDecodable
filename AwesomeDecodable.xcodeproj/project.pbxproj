@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E27AC672497CF7D0044C96E /* DecodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E27AC662497CF7D0044C96E /* DecodableDefault.swift */; };
 		2E5F952C2488FD1A00DF08AC /* one-invalid-article.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F952B2488FD1A00DF08AC /* one-invalid-article.json */; };
 		2E5F952E2488FE8200DF08AC /* invalid-articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F952D2488FE8200DF08AC /* invalid-articles.json */; };
 		2E5F95302488FF9F00DF08AC /* null-articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F952F2488FF9F00DF08AC /* null-articles.json */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E27AC662497CF7D0044C96E /* DecodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefault.swift; sourceTree = "<group>"; };
 		2E5F952B2488FD1A00DF08AC /* one-invalid-article.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "one-invalid-article.json"; sourceTree = "<group>"; };
 		2E5F952D2488FE8200DF08AC /* invalid-articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "invalid-articles.json"; sourceTree = "<group>"; };
 		2E5F952F2488FF9F00DF08AC /* null-articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "null-articles.json"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				2E9556A4247BEF7C0093A0B2 /* Info.plist */,
 				2E9556C4247BF2D00093A0B2 /* Array */,
 				2E5F95332489222100DF08AC /* LosslessValue */,
+				2E27AC662497CF7D0044C96E /* DecodableDefault.swift */,
 			);
 			path = AwesomeDecodable;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9556BB247BF07E0093A0B2 /* LossyDecodableArray.swift in Sources */,
+				2E27AC672497CF7D0044C96E /* DecodableDefault.swift in Sources */,
 				2E5F95352489223800DF08AC /* LosslessValue.swift in Sources */,
 				2E5F9547248940BB00DF08AC /* LosslessStringDecodingStrategy.swift in Sources */,
 			);
