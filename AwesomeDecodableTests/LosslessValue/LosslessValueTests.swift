@@ -11,20 +11,10 @@ import Quick
 import Nimble
 @testable import AwesomeDecodable
 
-/// A Strategy that defines that the expected type is `Int` but should try
-/// to decode the data as a `String` also.
-/// If the decoding process fails, the property value will be `0`
-fileprivate struct IntOrStringDecodingStrategy: LosslessStringDecodingStrategy {
-    static var defaultValue: Int = 0
-    static var supportedTypes: [LosslessStringDecodable.Type] = [String.self]
-}
-
-fileprivate typealias DefaultIntLosslessValue = LosslessValue<IntOrStringDecodingStrategy>
-
 fileprivate struct User: Decodable, Equatable {
     let name: String
 
-    @DefaultIntLosslessValue
+    @LosslessValue.IntOrString
     private(set) var age: Int
 }
 
@@ -130,10 +120,10 @@ private extension LosslessValueTests {
                     expect(sut).toNot(beNil())
                     expect(sut).toNot(equal(expectedUser))
                     expect(sut?.name).to(equal(expectedUser.name))
-                    expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+                    expect(sut?.age).to(equal(0))
 
                     expect({
-                        guard case LosslessValueDecodingError.invalidValue(let value, let type)? = sut?.$age.error else {
+                        guard case LosslessValue.DecodingError.invalidValue(let value, let type)? = sut?.$age.error else {
                             return .failed(reason: "The error should be of type 'invalidValue'")
                         }
 
@@ -166,10 +156,10 @@ private extension LosslessValueTests {
                 expect(sut).toNot(beNil())
                 expect(sut).toNot(equal(expectedUser))
                 expect(sut?.name).to(equal(expectedUser.name))
-                expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+                expect(sut?.age).to(equal(0))
 
                 expect({
-                    guard case LosslessValueDecodingError.unsupportedType(let types)? = sut?.$age.error else {
+                    guard case LosslessValue.DecodingError.unsupportedType(let types)? = sut?.$age.error else {
                         return .failed(reason: "The error should be of type 'unsupportedType'")
                     }
 
@@ -200,7 +190,7 @@ private extension LosslessValueTests {
                 expect(sut).toNot(beNil())
                 expect(sut).toNot(equal(expectedUser))
                 expect(sut?.name).to(equal(expectedUser.name))
-                expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+                expect(sut?.age).to(equal(0))
 
                 expect(sut?.$age.error).to(beNil())
             }
@@ -227,7 +217,7 @@ private extension LosslessValueTests {
                 expect(sut).toNot(beNil())
                 expect(sut).toNot(equal(expectedUser))
                 expect(sut?.name).to(equal(expectedUser.name))
-                expect(sut?.age).to(equal(IntOrStringDecodingStrategy.defaultValue))
+                expect(sut?.age).to(equal(0))
 
                 expect(sut?.$age.error).to(beNil())
             }

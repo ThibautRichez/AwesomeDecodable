@@ -17,6 +17,7 @@ public enum DecodableDefault {
     @propertyWrapper
     public struct Wrapper<Strategy: DecodableDefaultStrategy>: Decodable {
         public typealias Value = Strategy.Value
+
         public let wrappedValue: Value
 
         public init(wrappedValue: Value) {
