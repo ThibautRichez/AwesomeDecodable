@@ -98,12 +98,13 @@ extension DecodableDefault.Wrapper: Encodable where Value: Encodable {
 
 
 extension KeyedDecodingContainer {
-    /// Default implementation for decoding a LossyDecodableArray
+    /// Default implementation for decoding a `DecodableDefault.Wrapper`
     ///
-    /// Decodes successfully if key is available. Otherwise, fallback to the default value.
+    /// Decodes successfully if the key exists and value has the expected type.
+    /// Otherwise, fallback to the default value.
     func decode<T>(_ type: DecodableDefault.Wrapper<T>.Type,
                    forKey key: KeyedDecodingContainer<K>.Key) throws -> DecodableDefault.Wrapper<T> {
-        guard let result = try self.decodeIfPresent(type.self, forKey: key) else {
+        guard let result = try? self.decodeIfPresent(type.self, forKey: key) else {
             return DecodableDefault.Wrapper(wrappedValue: T.defaultValue)
         }
 

@@ -38,3 +38,18 @@ class FileReader {
         return data
     }
 }
+
+enum StringConversionError: Error {
+    case invalidValue(_ value: String, encoding: String.Encoding)
+}
+
+extension String {
+    func decode<T: Decodable>(using encoding: String.Encoding = .utf8,
+                              decoder: JSONDecoder = .init()) throws -> T {
+        guard let data = self.data(using: encoding) else {
+            throw StringConversionError.invalidValue(self, encoding: encoding)
+        }
+
+        return try decoder.decode(T.self, from: data)
+    }
+}
