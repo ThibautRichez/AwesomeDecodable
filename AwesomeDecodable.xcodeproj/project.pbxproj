@@ -33,6 +33,7 @@
 		2E9556C3247BF2BF0093A0B2 /* valid-articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9556C2247BF2BF0093A0B2 /* valid-articles.json */; };
 		2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */; };
 		2ED2A76C24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED2A76B24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift */; };
+		2ED2A76E249986EC00A6793C /* DecodableDefaultTests+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED2A76D249986EC00A6793C /* DecodableDefaultTests+Zero.swift */; };
 		8F446F385551ECEBD6315B56 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55913FBAB5B8248646525748 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework */; };
 		CD60DDB80D46B137F0EB3669 /* Pods_AwesomeDecodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F8FC27D71C5E1FAC74B9F8 /* Pods_AwesomeDecodable.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		2E9556C2247BF2BF0093A0B2 /* valid-articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-articles.json"; sourceTree = "<group>"; };
 		2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDecodableArrayTests.swift; sourceTree = "<group>"; };
 		2ED2A76B24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+EmptyMap.swift"; sourceTree = "<group>"; };
+		2ED2A76D249986EC00A6793C /* DecodableDefaultTests+Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+Zero.swift"; sourceTree = "<group>"; };
 		55913FBAB5B8248646525748 /* Pods_AwesomeDecodable_AwesomeDecodableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeDecodable_AwesomeDecodableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F8FC27D71C5E1FAC74B9F8 /* Pods_AwesomeDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD3D0A928B1B295CB476995 /* Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeDecodable-AwesomeDecodableTests/Pods-AwesomeDecodable-AwesomeDecodableTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				2E3F3B862498CBD100D8B888 /* DecodableDefaultTests+EmptyString.swift */,
 				2E3F3B892498CEEF00D8B888 /* DecodableDefaultTests+EmptyList.swift */,
 				2ED2A76B24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift */,
+				2ED2A76D249986EC00A6793C /* DecodableDefaultTests+Zero.swift */,
 			);
 			path = DecodableDefault;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				2E9556BE247BF1B40093A0B2 /* FileReader.swift in Sources */,
 				2E3F3B852498CB5200D8B888 /* DecodableDefaultTests+False.swift in Sources */,
 				2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */,
+				2ED2A76E249986EC00A6793C /* DecodableDefaultTests+Zero.swift in Sources */,
 				2E3F3B832498C71200D8B888 /* DecodableDefaultTests+True.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
