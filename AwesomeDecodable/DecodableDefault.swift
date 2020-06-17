@@ -64,24 +64,14 @@ public extension DecodableDefault {
 }
 
 public extension DecodableDefault {
-    // MARK: - Bool
-
     typealias True = Wrapper<Strategies.True>
     typealias False = Wrapper<Strategies.False>
 
-    // MARK: - String
-
     typealias EmptyString = Wrapper<Strategies.EmptyString>
-
-    // MARK: - List
 
     typealias EmptyList<T: DecodableList> = Wrapper<Strategies.EmptyList<T>>
 
-    // MARK: - Map
-
     typealias EmptyMap<T: DecodableMap> = Wrapper<Strategies.EmptyMap<T>>
-
-    // MARK: - Number
 
     typealias Zero<T: DecodableNumeric> = Wrapper<Strategies.Zero<T>>
 }
@@ -95,7 +85,6 @@ extension DecodableDefault.Wrapper: Encodable where Value: Encodable {
         try container.encode(self.wrappedValue)
     }
 }
-
 
 extension KeyedDecodingContainer {
     /// Default implementation for decoding a `DecodableDefault.Wrapper`

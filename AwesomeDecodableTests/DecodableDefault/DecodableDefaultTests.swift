@@ -38,7 +38,7 @@ final class DecodableDefaultBehavior<T: Decodable & Equatable>: Behavior<Decodab
             }
 
             context("WHEN we decode into the passed object type") {
-                var sut: T!
+                var sut: T?
                 beforeEach {
                     expect { sut = try json.decode() }.toNot(throwError())
                 }
