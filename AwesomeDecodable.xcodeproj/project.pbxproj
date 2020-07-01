@@ -52,6 +52,7 @@
 		2E64E45D24ACEE47005A5317 /* DecodingError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Equatable.swift"; sourceTree = "<group>"; };
 		2E64E46024ACF105005A5317 /* DecodableDefaultBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefaultBehavior.swift; sourceTree = "<group>"; };
 		2E64E46224ACF1D3005A5317 /* String+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decodable.swift"; sourceTree = "<group>"; };
+		2E64E46524ACF357005A5317 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwesomeDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwesomeDecodable.h; sourceTree = "<group>"; };
 		2E9556A4247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		2E955696247BEF7C0093A0B2 = {
 			isa = PBXGroup;
 			children = (
+				2E64E46524ACF357005A5317 /* README.md */,
 				2E9556A2247BEF7C0093A0B2 /* AwesomeDecodable */,
 				2E9556AD247BEF7C0093A0B2 /* AwesomeDecodableTests */,
 				2E9556A1247BEF7C0093A0B2 /* Products */,

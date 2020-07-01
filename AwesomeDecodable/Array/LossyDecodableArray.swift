@@ -72,6 +72,12 @@ extension LossyDecodableArray: Equatable where Element: Equatable {
     }
 }
 
+extension LossyDecodableArray: Encodable where Element: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        try self.wrappedValue.encode(to: encoder)
+    }
+}
+
 extension KeyedDecodingContainer {
     /// Default implementation for decoding a LossyDecodableArray
     ///

@@ -132,6 +132,12 @@ extension LosslessValue.Wrapper: Hashable where Value: Hashable {
     }
 }
 
+extension LosslessValue.Wrapper: Encodable where Value: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        try self.wrappedValue.encode(to: encoder)
+    }
+}
+
 extension KeyedDecodingContainer {
     /// Default implementation for decoding a LossyDecodableArray
     ///
