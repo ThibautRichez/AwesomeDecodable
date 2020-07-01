@@ -16,7 +16,7 @@ fileprivate struct Functionnality: Decodable, Equatable {
     var name: String
 }
 
-fileprivate typealias DecodableDefaultEmptyMapBehavior = DecodableDefaultBehavior<Functionnality>
+fileprivate typealias DecodableDefaultEmptyStringBehavior = DecodableDefaultBehavior<Functionnality>
 
 extension DecodableDefaultTests {
     func test_empty_string_strategy() {
@@ -33,7 +33,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "name": "Onboarding" }"#
             let expectedResult = Functionnality(name: "Onboarding")
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyStringBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -45,7 +45,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "name": null }"#
             let expectedResult = Functionnality(name: "")
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyStringBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -56,7 +56,7 @@ private extension DecodableDefaultTests {
             let json = #"{ }"#
             let expectedResult = Functionnality(name: "")
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyStringBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -67,7 +67,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "name": true }"#
             let expectedResult = Functionnality(name: "")
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyStringBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }

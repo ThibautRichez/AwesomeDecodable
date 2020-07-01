@@ -38,22 +38,30 @@ public struct LossyDecodableArray<Element: Decodable>: Decodable {
     }
 
     public init(from decoder: Decoder) throws {
-        var container = try decoder.unkeyedContainer()
-        var elements = [Element]()
-        while !container.isAtEnd {
-            do {
-                let element = try container.decode(Element.self)
-                elements.append(element)
-            } catch {
-                self.errors.append(error)
+        do {
+            var container = try decoder.unkeyedContainer()
+            var elements = [Element]()
+            while !container.isAtEnd {
+                do {
+                    let element = try container.decode(Element.self)
+                    elements.append(element)
+                } catch {
+                    self.errors.append(error)
 
-                // if that fails, we still need to move our decoding cursor past that element
-                // to avoid infinite loop.
-                _ = try? container.decode(DecodableDummy.self)
+                    // if that fails, we still need to move our decoding cursor past that element.
+                    // Otherwise, the container will never be 'isAtEnd' and we will be stuck in an
+                    // infinite loop.
+                    _ = try? container.decode(DecodableDummy.self)
+                }
             }
-        }
 
-        self.wrappedValue = elements
+            self.wrappedValue = elements
+        } catch {
+            // If the decoded type is not an array, we will not be able to
+            // retrieve an unkeyed container from it.
+            self.wrappedValue = []
+            self.errors.append(error)
+        }
     }
 }
 

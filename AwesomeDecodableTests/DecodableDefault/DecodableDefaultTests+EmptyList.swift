@@ -16,7 +16,7 @@ fileprivate struct Functionnality: Decodable, Equatable {
     var names: [String]
 }
 
-fileprivate typealias DecodableDefaultEmptyMapBehavior = DecodableDefaultBehavior<Functionnality>
+fileprivate typealias DecodableDefaultEmptyListBehavior = DecodableDefaultBehavior<Functionnality>
 
 extension DecodableDefaultTests {
     func test_empty_list_strategy() {
@@ -33,7 +33,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "names": ["Onboarding"] }"#
             let expectedResult = Functionnality(names: ["Onboarding"])
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyListBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -44,7 +44,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "list": null }"#
             let expectedResult = Functionnality(names: [])
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyListBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -55,7 +55,7 @@ private extension DecodableDefaultTests {
             let json = #"{ }"#
             let expectedResult = Functionnality(names: [])
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyListBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -66,7 +66,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "names": ["Onboarding", 12] }"#
             let expectedResult = Functionnality(names: [])
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultEmptyListBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }

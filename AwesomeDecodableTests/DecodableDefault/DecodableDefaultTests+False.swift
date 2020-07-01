@@ -16,7 +16,7 @@ fileprivate struct Functionnality: Decodable, Equatable {
     var enable: Bool
 }
 
-fileprivate typealias DecodableDefaultEmptyMapBehavior = DecodableDefaultBehavior<Functionnality>
+fileprivate typealias DecodableDefaultFalseBehavior = DecodableDefaultBehavior<Functionnality>
 
 extension DecodableDefaultTests {
     func test_false_strategy() {
@@ -34,7 +34,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "enable": true }"#
             let expectedResult = Functionnality(enable: true)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultFalseBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -45,7 +45,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "enable": false }"#
             let expectedResult = Functionnality(enable: false)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultFalseBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -56,7 +56,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "enable": null }"#
             let expectedResult = Functionnality(enable: false)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultFalseBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -67,7 +67,7 @@ private extension DecodableDefaultTests {
             let json = #"{ }"#
             let expectedResult = Functionnality(enable: false)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultFalseBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -78,7 +78,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "enable": "I think not" }"#
             let expectedResult = Functionnality(enable: false)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultFalseBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }

@@ -16,7 +16,7 @@ fileprivate struct Article: Decodable, Equatable {
     var comments: Int
 }
 
-fileprivate typealias DecodableDefaultEmptyMapBehavior = DecodableDefaultBehavior<Article>
+fileprivate typealias DecodableDefaultZeroBehavior = DecodableDefaultBehavior<Article>
 
 extension DecodableDefaultTests {
     func test_zero_strategy() {
@@ -33,7 +33,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "comments": 3 }"#
             let expectedResult = Article(comments: 3)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultZeroBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -44,7 +44,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "comments": null }"#
             let expectedResult = Article(comments: 0)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultZeroBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -55,7 +55,7 @@ private extension DecodableDefaultTests {
             let json = #"{ }"#
             let expectedResult = Article(comments: 0)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultZeroBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }
@@ -66,7 +66,7 @@ private extension DecodableDefaultTests {
             let json = #"{ "comments": "Je ne suis pas d'accord" }"#
             let expectedResult = Article(comments: 0)
 
-            itBehavesLike(DecodableDefaultEmptyMapBehavior.self) {
+            itBehavesLike(DecodableDefaultZeroBehavior.self) {
                 DecodableDefaultBehaviorContext(json: json, expectedResult: expectedResult)
             }
         }

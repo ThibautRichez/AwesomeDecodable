@@ -13,24 +13,15 @@
 		2E3F3B852498CB5200D8B888 /* DecodableDefaultTests+False.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F3B842498CB5200D8B888 /* DecodableDefaultTests+False.swift */; };
 		2E3F3B872498CBD100D8B888 /* DecodableDefaultTests+EmptyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F3B862498CBD100D8B888 /* DecodableDefaultTests+EmptyString.swift */; };
 		2E3F3B8A2498CEEF00D8B888 /* DecodableDefaultTests+EmptyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F3B892498CEEF00D8B888 /* DecodableDefaultTests+EmptyList.swift */; };
-		2E5F952C2488FD1A00DF08AC /* one-invalid-article.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F952B2488FD1A00DF08AC /* one-invalid-article.json */; };
-		2E5F952E2488FE8200DF08AC /* invalid-articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F952D2488FE8200DF08AC /* invalid-articles.json */; };
-		2E5F95302488FF9F00DF08AC /* null-articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F952F2488FF9F00DF08AC /* null-articles.json */; };
-		2E5F95322489008500DF08AC /* missing-articles-key.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F95312489008500DF08AC /* missing-articles-key.json */; };
 		2E5F95352489223800DF08AC /* LosslessValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F95342489223800DF08AC /* LosslessValue.swift */; };
 		2E5F95382489251F00DF08AC /* LosslessValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F95372489251F00DF08AC /* LosslessValueTests.swift */; };
-		2E5F953B248927EA00DF08AC /* valid-user.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953A248927EA00DF08AC /* valid-user.json */; };
-		2E5F953D24892B5C00DF08AC /* user-valid-string-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953C24892B5C00DF08AC /* user-valid-string-age.json */; };
-		2E5F953F24892C5300DF08AC /* user-bool-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F953E24892C5300DF08AC /* user-bool-age.json */; };
-		2E5F954124892E0C00DF08AC /* user-null-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F954024892E0C00DF08AC /* user-null-age.json */; };
-		2E5F954324892E5B00DF08AC /* user-missing-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F954224892E5B00DF08AC /* user-missing-age.json */; };
-		2E5F9545248930C800DF08AC /* user-invalid-string-age.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E5F9544248930C800DF08AC /* user-invalid-string-age.json */; };
 		2E5F9547248940BB00DF08AC /* LosslessStringDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F9546248940BB00DF08AC /* LosslessStringDecodingStrategy.swift */; };
+		2E64E45E24ACEE47005A5317 /* DecodingError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64E45D24ACEE47005A5317 /* DecodingError+Equatable.swift */; };
+		2E64E46124ACF105005A5317 /* DecodableDefaultBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64E46024ACF105005A5317 /* DecodableDefaultBehavior.swift */; };
+		2E64E46324ACF1D3005A5317 /* String+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64E46224ACF1D3005A5317 /* String+Decodable.swift */; };
 		2E9556AA247BEF7C0093A0B2 /* AwesomeDecodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */; };
 		2E9556B1247BEF7C0093A0B2 /* AwesomeDecodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E9556BB247BF07E0093A0B2 /* LossyDecodableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */; };
-		2E9556BE247BF1B40093A0B2 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556BD247BF1B40093A0B2 /* FileReader.swift */; };
-		2E9556C3247BF2BF0093A0B2 /* valid-articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9556C2247BF2BF0093A0B2 /* valid-articles.json */; };
 		2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */; };
 		2ED2A76C24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED2A76B24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift */; };
 		2ED2A76E249986EC00A6793C /* DecodableDefaultTests+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED2A76D249986EC00A6793C /* DecodableDefaultTests+Zero.swift */; };
@@ -55,27 +46,18 @@
 		2E3F3B842498CB5200D8B888 /* DecodableDefaultTests+False.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+False.swift"; sourceTree = "<group>"; };
 		2E3F3B862498CBD100D8B888 /* DecodableDefaultTests+EmptyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+EmptyString.swift"; sourceTree = "<group>"; };
 		2E3F3B892498CEEF00D8B888 /* DecodableDefaultTests+EmptyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+EmptyList.swift"; sourceTree = "<group>"; };
-		2E5F952B2488FD1A00DF08AC /* one-invalid-article.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "one-invalid-article.json"; sourceTree = "<group>"; };
-		2E5F952D2488FE8200DF08AC /* invalid-articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "invalid-articles.json"; sourceTree = "<group>"; };
-		2E5F952F2488FF9F00DF08AC /* null-articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "null-articles.json"; sourceTree = "<group>"; };
-		2E5F95312489008500DF08AC /* missing-articles-key.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "missing-articles-key.json"; sourceTree = "<group>"; };
 		2E5F95342489223800DF08AC /* LosslessValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessValue.swift; sourceTree = "<group>"; };
 		2E5F95372489251F00DF08AC /* LosslessValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessValueTests.swift; sourceTree = "<group>"; };
-		2E5F953A248927EA00DF08AC /* valid-user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-user.json"; sourceTree = "<group>"; };
-		2E5F953C24892B5C00DF08AC /* user-valid-string-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-valid-string-age.json"; sourceTree = "<group>"; };
-		2E5F953E24892C5300DF08AC /* user-bool-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-bool-age.json"; sourceTree = "<group>"; };
-		2E5F954024892E0C00DF08AC /* user-null-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-null-age.json"; sourceTree = "<group>"; };
-		2E5F954224892E5B00DF08AC /* user-missing-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-missing-age.json"; sourceTree = "<group>"; };
-		2E5F9544248930C800DF08AC /* user-invalid-string-age.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "user-invalid-string-age.json"; sourceTree = "<group>"; };
 		2E5F9546248940BB00DF08AC /* LosslessStringDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosslessStringDecodingStrategy.swift; sourceTree = "<group>"; };
+		2E64E45D24ACEE47005A5317 /* DecodingError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Equatable.swift"; sourceTree = "<group>"; };
+		2E64E46024ACF105005A5317 /* DecodableDefaultBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefaultBehavior.swift; sourceTree = "<group>"; };
+		2E64E46224ACF1D3005A5317 /* String+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decodable.swift"; sourceTree = "<group>"; };
 		2E9556A0247BEF7C0093A0B2 /* AwesomeDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwesomeDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9556A3247BEF7C0093A0B2 /* AwesomeDecodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwesomeDecodable.h; sourceTree = "<group>"; };
 		2E9556A4247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9556A9247BEF7C0093A0B2 /* AwesomeDecodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeDecodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9556B0247BEF7C0093A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9556BA247BF07E0093A0B2 /* LossyDecodableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDecodableArray.swift; sourceTree = "<group>"; };
-		2E9556BD247BF1B40093A0B2 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
-		2E9556C2247BF2BF0093A0B2 /* valid-articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-articles.json"; sourceTree = "<group>"; };
 		2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyDecodableArrayTests.swift; sourceTree = "<group>"; };
 		2ED2A76B24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+EmptyMap.swift"; sourceTree = "<group>"; };
 		2ED2A76D249986EC00A6793C /* DecodableDefaultTests+Zero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodableDefaultTests+Zero.swift"; sourceTree = "<group>"; };
@@ -111,6 +93,7 @@
 		2E3F3B882498CED000D8B888 /* DecodableDefault */ = {
 			isa = PBXGroup;
 			children = (
+				2E64E45F24ACF0F4005A5317 /* Commons */,
 				2E3F3B802498C5F700D8B888 /* DecodableDefaultTests.swift */,
 				2E3F3B822498C71200D8B888 /* DecodableDefaultTests+True.swift */,
 				2E3F3B842498CB5200D8B888 /* DecodableDefaultTests+False.swift */,
@@ -134,23 +117,34 @@
 		2E5F95362489250800DF08AC /* LosslessValue */ = {
 			isa = PBXGroup;
 			children = (
-				2E5F95392489277400DF08AC /* JSON */,
 				2E5F95372489251F00DF08AC /* LosslessValueTests.swift */,
 			);
 			path = LosslessValue;
 			sourceTree = "<group>";
 		};
-		2E5F95392489277400DF08AC /* JSON */ = {
+		2E64E45C24ACEE32005A5317 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				2E5F953A248927EA00DF08AC /* valid-user.json */,
-				2E5F953C24892B5C00DF08AC /* user-valid-string-age.json */,
-				2E5F9544248930C800DF08AC /* user-invalid-string-age.json */,
-				2E5F953E24892C5300DF08AC /* user-bool-age.json */,
-				2E5F954024892E0C00DF08AC /* user-null-age.json */,
-				2E5F954224892E5B00DF08AC /* user-missing-age.json */,
+				2E64E45D24ACEE47005A5317 /* DecodingError+Equatable.swift */,
+				2E64E46224ACF1D3005A5317 /* String+Decodable.swift */,
 			);
-			path = JSON;
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		2E64E45F24ACF0F4005A5317 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				2E64E46024ACF105005A5317 /* DecodableDefaultBehavior.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		2E64E46424ACF1FB005A5317 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				2E27AC662497CF7D0044C96E /* DecodableDefault.swift */,
+			);
+			path = Default;
 			sourceTree = "<group>";
 		};
 		2E955696247BEF7C0093A0B2 = {
@@ -180,7 +174,7 @@
 				2E9556A4247BEF7C0093A0B2 /* Info.plist */,
 				2E9556C4247BF2D00093A0B2 /* Array */,
 				2E5F95332489222100DF08AC /* LosslessValue */,
-				2E27AC662497CF7D0044C96E /* DecodableDefault.swift */,
+				2E64E46424ACF1FB005A5317 /* Default */,
 			);
 			path = AwesomeDecodable;
 			sourceTree = "<group>";
@@ -188,33 +182,13 @@
 		2E9556AD247BEF7C0093A0B2 /* AwesomeDecodableTests */ = {
 			isa = PBXGroup;
 			children = (
+				2E64E45C24ACEE32005A5317 /* Commons */,
 				2E9556C5247BF2E40093A0B2 /* Array */,
 				2E5F95362489250800DF08AC /* LosslessValue */,
 				2E3F3B882498CED000D8B888 /* DecodableDefault */,
-				2E9556BC247BF1A90093A0B2 /* Helpers */,
 				2E9556B0247BEF7C0093A0B2 /* Info.plist */,
 			);
 			path = AwesomeDecodableTests;
-			sourceTree = "<group>";
-		};
-		2E9556BC247BF1A90093A0B2 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				2E9556BD247BF1B40093A0B2 /* FileReader.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		2E9556C1247BF2AA0093A0B2 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				2E9556C2247BF2BF0093A0B2 /* valid-articles.json */,
-				2E5F952B2488FD1A00DF08AC /* one-invalid-article.json */,
-				2E5F952D2488FE8200DF08AC /* invalid-articles.json */,
-				2E5F952F2488FF9F00DF08AC /* null-articles.json */,
-				2E5F95312489008500DF08AC /* missing-articles-key.json */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		2E9556C4247BF2D00093A0B2 /* Array */ = {
@@ -228,7 +202,6 @@
 		2E9556C5247BF2E40093A0B2 /* Array */ = {
 			isa = PBXGroup;
 			children = (
-				2E9556C1247BF2AA0093A0B2 /* JSON */,
 				2E9556C6247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift */,
 			);
 			path = Array;
@@ -357,17 +330,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5F9545248930C800DF08AC /* user-invalid-string-age.json in Resources */,
-				2E9556C3247BF2BF0093A0B2 /* valid-articles.json in Resources */,
-				2E5F953B248927EA00DF08AC /* valid-user.json in Resources */,
-				2E5F95322489008500DF08AC /* missing-articles-key.json in Resources */,
-				2E5F95302488FF9F00DF08AC /* null-articles.json in Resources */,
-				2E5F953F24892C5300DF08AC /* user-bool-age.json in Resources */,
-				2E5F952E2488FE8200DF08AC /* invalid-articles.json in Resources */,
-				2E5F954124892E0C00DF08AC /* user-null-age.json in Resources */,
-				2E5F953D24892B5C00DF08AC /* user-valid-string-age.json in Resources */,
-				2E5F952C2488FD1A00DF08AC /* one-invalid-article.json in Resources */,
-				2E5F954324892E5B00DF08AC /* user-missing-age.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,14 +417,16 @@
 			files = (
 				2ED2A76C24997DB100A6793C /* DecodableDefaultTests+EmptyMap.swift in Sources */,
 				2E5F95382489251F00DF08AC /* LosslessValueTests.swift in Sources */,
+				2E64E46324ACF1D3005A5317 /* String+Decodable.swift in Sources */,
 				2E3F3B8A2498CEEF00D8B888 /* DecodableDefaultTests+EmptyList.swift in Sources */,
 				2E3F3B812498C5F700D8B888 /* DecodableDefaultTests.swift in Sources */,
 				2E3F3B872498CBD100D8B888 /* DecodableDefaultTests+EmptyString.swift in Sources */,
-				2E9556BE247BF1B40093A0B2 /* FileReader.swift in Sources */,
+				2E64E46124ACF105005A5317 /* DecodableDefaultBehavior.swift in Sources */,
 				2E3F3B852498CB5200D8B888 /* DecodableDefaultTests+False.swift in Sources */,
 				2E9556C7247BF2FA0093A0B2 /* LossyDecodableArrayTests.swift in Sources */,
 				2ED2A76E249986EC00A6793C /* DecodableDefaultTests+Zero.swift in Sources */,
 				2E3F3B832498C71200D8B888 /* DecodableDefaultTests+True.swift in Sources */,
+				2E64E45E24ACEE47005A5317 /* DecodingError+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
