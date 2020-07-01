@@ -92,16 +92,25 @@ public extension LosslessValue {
             public static var supportedTypes: [LosslessStringDecodable.Type] { [String.self] }
         }
 
+        /// A Strategy that defines that the expected type is `String` but should try
+        /// to decode the data as a `Int` also.
+        /// If the decoding process fails, the property value will be an empty string.
         public enum StringOrInt: LosslessStringDecodingStrategy {
             public static var defaultValue: String { "" }
             public static var supportedTypes: [LosslessStringDecodable.Type] { [Int.self] }
         }
 
+        /// A Strategy that defines that the expected type is `Bool` but should try
+        /// to decode the data as a `String` also.
+        /// If the decoding process fails, the property value will be `true`
         public enum TrueOrString: LosslessStringDecodingStrategy {
             public static var defaultValue: Bool { true }
             public static var supportedTypes: [LosslessStringDecodable.Type] { [String.self] }
         }
 
+        /// A Strategy that defines that the expected type is `Bool` but should try
+        /// to decode the data as a `String` also.
+        /// If the decoding process fails, the property value will be `false`
         public enum FalseOrString: LosslessStringDecodingStrategy {
             public static var defaultValue: Bool { false }
             public static var supportedTypes: [LosslessStringDecodable.Type] { [String.self] }
