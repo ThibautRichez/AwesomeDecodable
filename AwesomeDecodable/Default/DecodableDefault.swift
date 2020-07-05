@@ -8,12 +8,22 @@
 
 import Foundation
 
+/// Defines the strategy to be used by `DecodableDefault` during the decoding
+/// process.
 public protocol DecodableDefaultStrategy {
+    /// Represents the expected variable type.
     associatedtype Value: Decodable
+
+    /// Defines the default value that will be used if the decoding process fails.
     static var defaultValue: Value { get }
 }
 
 public enum DecodableDefault {
+    /// A `propertyWrapper` that allows to define a default value
+    /// if the decoding process fails.
+    ///
+    /// The strategy default value will be applied if the associated coding key is
+    /// not present, if the associated value is 'null' or of an invalid type.
     @propertyWrapper
     public struct Wrapper<Strategy: DecodableDefaultStrategy>: Decodable {
         public typealias Value = Strategy.Value
@@ -64,15 +74,22 @@ public extension DecodableDefault {
 }
 
 public extension DecodableDefault {
+    /// Sets the value to `true` if the decoding process fails.
     typealias True = Wrapper<Strategies.True>
+
+    /// Sets the value to `false` if the decoding process fails.
     typealias False = Wrapper<Strategies.False>
 
+    /// Sets the value to an empty string if the decoding process fails.
     typealias EmptyString = Wrapper<Strategies.EmptyString>
 
+    /// Sets the value to an empty array if the decoding process fails.
     typealias EmptyList<T: DecodableList> = Wrapper<Strategies.EmptyList<T>>
 
+    /// Sets the value to an empty map if the decoding process fails.
     typealias EmptyMap<T: DecodableMap> = Wrapper<Strategies.EmptyMap<T>>
 
+    /// Sets the value to `0` if the decoding process fails.
     typealias Zero<T: DecodableNumeric> = Wrapper<Strategies.Zero<T>>
 }
 
@@ -81,8 +98,7 @@ extension DecodableDefault.Wrapper: Hashable where Value: Hashable {}
 
 extension DecodableDefault.Wrapper: Encodable where Value: Encodable {
     public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encode(self.wrappedValue)
+        try self.wrappedValue.encode(to: encoder)
     }
 }
 

@@ -98,10 +98,10 @@ print(feature.isEnable) // false
 print(feature.$isEnable.error) // nil
 
 let json = #"{ "isEnable": 99 }"#.data(using: .utf8)!
-let user = try JSONDecoder().decode(Feature.self, from: json)
+let feature = try JSONDecoder().decode(Feature.self, from: json)
 
-print(user.identifier) // true
-print(user.$age.error) // LosslessValue.DecodingError.unsupportedType
+print(feature.identifier) // true
+print(feature.$isEnable.error) // LosslessValue.DecodingError.unsupportedType
 ```
 
 #### FalseOrString
@@ -120,10 +120,10 @@ print(feature.isEnable) // true
 print(feature.$isEnable.error) // nil
 
 let json = #"{ "isEnable": 99 }"#.data(using: .utf8)!
-let user = try JSONDecoder().decode(Feature.self, from: json)
+let feature = try JSONDecoder().decode(Feature.self, from: json)
 
-print(user.identifier) // false
-print(user.$age.error) // LosslessValue.DecodingError.unsupportedType
+print(feature.identifier) // false
+print(feature.$isEnable.error) // LosslessValue.DecodingError.unsupportedType
 ```
 
 #### More
@@ -152,17 +152,154 @@ extension LosslessValue {
 
 ```swift
 fileprivate struct Recipe {
-    @LosslessValue.LosslessValue
+    @LosslessValue.Experimental
     var description: String
 }
 ```
 
 ## DecodableDefault
 
-**WIP**
+`DecodableDefault` allows to define a default value for `Decodable` types that will be applied if the decoding process fails.
+
+This wrapper is used by defining a strategy (`DecodableDefaultStrategy`) that lets you define the type of the `Decodable` property  with its default value.
+
+It will fallback to its default value if the associated coding key is not present, if the associated value is 'null' or of an invalid type.
+
+### Strategies
+There is already a set of strategies ready for you to use. You will find them in `DecodableDefault.Strategies` enum.
+You can also use your own if you want a custom behavior.
+
+#### True
+Sets the value to `true` if the decoding process fails.
+
+```swift
+fileprivate struct Feature: Decodable {
+    @DecodableDefault.True
+    private(set) var isEnable: Bool
+}
+
+let json = #"{ "isEnable": false }"#.data(using: .utf8)!
+let feature = try JSONDecoder().decode(Feature.self, from: json)
+
+print(feature.isEnable) // false
+
+let json = #"{ "isEnable": null }"#.data(using: .utf8)!
+let feature = try JSONDecoder().decode(Feature.self, from: json)
+
+print(feature.isEnable) // true
+```
+
+#### False
+Sets the value to `false` if the decoding process fails.
+
+```swift
+fileprivate struct Feature: Decodable {
+    @DecodableDefault.False
+    private(set) var isEnable: Bool
+}
+
+let json = #"{ "isEnable": true }"#.data(using: .utf8)!
+let feature = try JSONDecoder().decode(Feature.self, from: json)
+
+print(feature.isEnable) // true
+
+let json = #"{ "isEnable": null }"#.data(using: .utf8)!
+let feature = try JSONDecoder().decode(Feature.self, from: json)
+
+print(feature.isEnable) // false
+```
+
+#### EmptyString
+Sets the value to an empty string if the decoding process fails.
+
+```swift
+fileprivate struct User: Decodable {
+    @DecodableDefault.EmptyString
+    private(set) var identifier: String
+}
+
+let json = #"{ "identifier": "XTGSKBJHB" }"#.data(using: .utf8)!
+let user = try JSONDecoder().decode(User.self, from: json)
+
+print(user.identifier) // XTGSKBJHB
+
+let json = #"{ "identifier": null }"#.data(using: .utf8)!
+let user = try JSONDecoder().decode(User.self, from: json)
+
+print(user.identifier) // ""
+```
+
+#### EmptyList
+Sets the value to an empty array if the decoding process fails.
+
+```swift
+fileprivate struct Article: Decodable {
+    @LossyDecodableArray
+    private(set) var keywords: [String]
+}
+
+let json = #"{ "keywords": [ "sports" ] }"#.data(using: .utf8)!
+let article = try JSONDecoder().decode(Article.self, from: json)
+
+print(article.keywords) // ["sports"]
+
+let json = #"{ "keywords": null }"#.data(using: .utf8)!
+let article = try JSONDecoder().decode(Article.self, from: json)
+
+print(article.keywords) // []
+```
+
+#### EmptyMap
+Sets the value to an empty map if the decoding process fails.
+
+```swift
+fileprivate struct Flight: Decodable {
+    @LossyDecodableArray
+    private(set) var airports: [String: String]
+}
+
+let json = #"{ "airports": [ "LAX": "Los Angeles International Airport" ] }"#.data(using: .utf8)!
+let flight = try JSONDecoder().decode(Flight.self, from: json)
+
+print(airports.airports) // ["LAX": "Los Angeles International Airport"]
+
+let json = #"{ "keywords": null }"#.data(using: .utf8)!
+let airports = try JSONDecoder().decode(Article.self, from: json)
+
+print(airports.airports) // [:]
+```
+#### More
+To implement your own strategies, please follow this process:
+
+- Add your strategy to the `DecodableDefault.Strategy` enum.
+
+```swift
+extension DecodableDefault.Strategies {
+    enum UnknownString: DecodableDefaultStrategy {
+        public static var defaultValue: String { "Unknown" }
+    }
+}
+```
+
+- Add a typealias in order to access your new strategy easily
+
+```swift
+extension DecodableDefault {
+    typealias UnknowString = Wrapper<Strategies.UnknownString>
+}
+```
+
+- Use
+
+```swift
+fileprivate struct User {
+    @DecodableDefault.UnknowString
+    var name: String
+}
+```
 
 ## Thanks
 
 I strongly recommand that you check these links:
-- https://github.com/marksands/BetterCodable
 - https://www.swiftbysundell.com/tips/default-decoding-values/
+- https://github.com/marksands/BetterCodable
