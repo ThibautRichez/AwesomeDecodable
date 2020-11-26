@@ -9,7 +9,7 @@
 import Foundation
 
 enum StringDecodableError: Error {
-    case dataEncoding(String.Encoding,  value: String)
+    case dataEncoding(String.Encoding, value: String)
 }
 
 extension String {

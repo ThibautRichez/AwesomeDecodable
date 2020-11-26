@@ -21,6 +21,9 @@ final class LossyDecodableArrayTests: QuickSpec {
         self.test_givenValidJson()
         self.test_givenOneInvalidEntry()
         self.test_givenInvalidEntries()
+        self.test_givenNullEntry()
+        self.test_givenMissingKey()
+        self.test_givenInvalidValueType()
     }
 }
 
